@@ -19,6 +19,8 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@fika/gatsby-source-cockpit": "^1.0.17",
+    "gatsby-source-cockpit": "^1.0.7",
     "prettier": "^1.18.2"
   },
   "keywords": [
