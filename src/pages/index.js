@@ -27,7 +27,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1></h1>
+      <h1>Amazing</h1>
       <ul>
         {
           data.allCockpitMenu.edges.map(({node}) => {
