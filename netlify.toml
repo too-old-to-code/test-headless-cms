@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/admin"
+  to = "http://139.59.185.0/auth/login"
+  status = 200
