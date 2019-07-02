@@ -10,15 +10,16 @@ const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query FoodQuery {
       allCockpitMenu {
-        edges {
-          node {
-            dish_name {
-              value
+        nodes {
+          items {
+            value {
+              name {
+                value
+              }
+              priceIn {
+                value
+              }
             }
-            price {
-              value
-            }
-            id
           }
         }
       }
@@ -30,12 +31,12 @@ const IndexPage = () => {
       <h1>Amazing</h1>
       <ul>
         {
-          data.allCockpitMenu.edges.map(({node}) => {
+          data.allCockpitMenu.nodes[0].items.value.map((item) => {
 
-            // console.log(node.node)
+            console.log(item)
             return (
-              <li key={node.id}>
-                {node.dish_name && node.dish_name.value} - {node.price && node.price.value}
+              <li key={item.name.value}>
+                {item.name && item.name.value} - {item.priceIn && item.priceIn.value}
               </li>
             )
           })
